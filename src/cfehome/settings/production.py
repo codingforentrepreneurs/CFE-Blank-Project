@@ -80,6 +80,13 @@ DATABASES = {
     }
 }
 
+# This is here for the Hello Linux setup script
+# https://github.com/codingforentrepreneurs/Hello-Linux
+try:
+    from .db_conf import *
+except:
+    pass
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
