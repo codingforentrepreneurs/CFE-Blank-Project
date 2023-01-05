@@ -1,9 +1,4 @@
-dj-database-url==0.4.2
-Django==1.11.17
-django-crispy-forms==1.6.1
-gunicorn==19.7.1
-olefile==0.44
-Pillow==4.2.1
-psycopg2>=2.7.7
-psycopg2-binary>=2.7.7
-pytz==2017.2
+Django>=4.1.0,<4.2.0
+python-decouple
+psycopg2
+gunicorn

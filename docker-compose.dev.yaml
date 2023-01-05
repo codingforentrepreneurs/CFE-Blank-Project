@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+    db:
+        image: postgres
+        restart: always
+        ports:
+            - 5432:5432
+        volumes:
+            - postgresdb_data:/var/lib/postgresql/data/
+        env_file:
+            - src/.env
+    redis:
+        image: redis
+        restart: always
+        ports:
+            - 6379:6379
+        volumes:
+            - redis_data:/data
+        entrypoint: redis-server --appendonly yes
+
+volumes:
+    postgresdb_data:
+    redis_data:
+
+networks:
+  default:
+    name: cfe_blank_network
